@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grainy Delights</title>
+    <link rel="stylesheet" href="modals.css">
+</head>
+<body>
+ 
+    <!-- Header Section -->
+    <header>
+        <div class="logo-group">
+            <img src="images/bread.png" alt="Shop Logo" class="logo-image" onclick="window.location.href='landing.html';">
+            <div class="logo">Grainy Delights</div>
+        </div>
+        <div class="header-icons">
+            <img src="images/search.png" alt="Search_Icon" class="svg-icon" onclick="window.location.href='';">
+            <img src="images/cart.png" alt="Shopping_Cart_Icon" class="svg-icon" onclick="window.location.href='';">
+        </div>
+    </header>
+ 
+    <!-- Main Products Section -->
+    <main class="story-main">
+        <section class="story-section-text">
+        <div class="story-section-image">
+        <h1 class="headline-text">Our Story</h1> <br> <br>
+        <p class="headline_descrip">Welcome to Grainy Delights, where we bring you the finest selection of traditional Filipino breads and pastries. Our journey began with a passion for preserving the rich culinary heritage of the Philippines, one delicious bite at a time.</p> <br>
+		<p class="headline_descrip">From the soft and fluffy Ensaymada to the sweet and savory Hopia, our products are crafted with love and care, using only the freshest ingredients. We take pride in our artisanal approach, ensuring that every item is baked to perfection and bursting with flavor.</p> <br>
+		<p class="headline_descrip">At Grainy Delights, we are committed to providing our customers with the highest quality products and exceptional service. We source our ingredients from local farmers and suppliers, ensuring that every item you purchase is made with care and attention to detail.</p>
+        </div>
+        </section>
+         <h2 class="headline-text">Featured Products</h2>
+       
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="images/ensaymada.png" alt="Ensaymada" class="product-image">
+                <h3 class="product-title">Ensaymada</h3>
+                <p class="product-price">₱50.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Ensaymada')">Add to Cart</button>
+            </div>
+ 
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="images/hopia.png" alt="Hopia" class="product-image">
+                <h3 class="product-title">Hopia</h3>
+                <p class="product-price">₱65.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Hopia')">Add to Cart</button>
+            </div>
+ 
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="images/Buko_Pie.png" alt="Buko Pie" class="product-image">
+                <h3 class="product-title">Buko Pie</h3>
+                <p class="product-price">₱500.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Buko Pie')">Add to Cart</button>
+            </div>
+            <button class="view-products-btn" style="grid-column: 1 / -1; margin: 0 auto;" onclick="window.location.href='index.html'" > View All Products</button>
+        </div>
+    </main>
+    
+        <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Grainy Delights. All rights reserved.</p>
+        <div class="footer-icons">
+            <img src="images/twitter.png" alt="Twitter_Icon" class="svg-icon" onclick="window.location.href='template.html';">
+            <img src="images/facebook.png" alt="Facebook_Icon" class="svg-icon" onclick="window.location.href='';">
+        </div>
+    </footer>
+ 
+    <!-- JavaScript for basic interaction -->
+    <script>
+        let cartTotal = 0;
+ 
+        function addToCart(productName) {
+            cartTotal++;
+            document.getElementById('cart-count').innerText = cartTotal;
+            alert(productName + " has been added to your cart!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grainy Delights</title>
+    <link rel="stylesheet" href="modals.css">
+</head>
+<body>
+ 
+    <!-- Header Section -->
+    <header>
+        <div class="logo-group">
+            <img src="images/bread.png" alt="Shop Logo" class="logo-image" onclick="window.location.href='landing.html';">
+            <div class="logo">Grainy Delights</div>
+        </div>
+        <div class="header-icons">
+            <img src="images/search.png" alt="Search_Icon" class="svg-icon" onclick="window.location.href='';">
+            <img src="images/cart.png" alt="Shopping_Cart_Icon" class="svg-icon" onclick="window.location.href='';">
+        </div>
+    </header>
+ 
+    <!-- Main Products Section -->
+    <main class="test_background">
+        <br><br>
+        <h2 class="headline-text">Featured Products</h2>
+       
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="images/ensaymada.png" alt="Ensaymada" class="product-image">
+                <h3 class="product-title">Ensaymada</h3>
+                <p class="product-price">₱50.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Ensaymada')">Add to Cart</button>
+            </div>
+ 
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="images/hopia.png" alt="Hopia" class="product-image">
+                <h3 class="product-title">Hopia</h3>
+                <p class="product-price">₱65.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Hopia')">Add to Cart</button>
+            </div>
+ 
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="images/Buko_Pie.png" alt="Buko Pie" class="product-image">
+                <h3 class="product-title">Buko Pie</h3>
+                <p class="product-price">₱500.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Buko Pie')">Add to Cart</button>
+            </div>
+ 
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="images/otap.png" alt="Otap" class="product-image">
+                <h3 class="product-title">Otap</h3>
+                <p class="product-price">₱100.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Otap')">Add to Cart</button>
+            </div>
+       <div class="product-card">
+                <img src="images/piaya.png" alt="Piaya" class="product-image">
+                <h3 class="product-title">Piaya</h3>
+                <p class="product-price">₱55.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Piaya')">Add to Cart</button>
+            </div>
+  <div class="product-card">
+                <img src="images/pandesal.png" alt="Classic Pandesal" class="product-image">
+                <h3 class="product-title">Classic Pandesal</h3>
+                <p class="product-price">₱30.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Classic Pandesal')">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+ 
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Grainy Delights. All rights reserved.</p>
+        <div class="footer-icons">
+            <img src="images/twitter.png" alt="Twitter_Icon" class="svg-icon" onclick="window.location.href='';">
+            <img src="images/facebook.png" alt="Facebook_Icon" class="svg-icon" onclick="window.location.href='';">
+        </div>
+    </footer>
+ 
+    <!-- JavaScript for basic interaction -->
+    <script>
+        let cartTotal = 0;
+ 
+        function addToCart(productName) {
+            cartTotal++;
+            document.getElementById('cart-count').innerText = cartTotal;
+            alert(productName + " has been added to your cart!");
+        }
+    </script>
+</body>
+</html>
