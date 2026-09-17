@@ -48,6 +48,10 @@ header {
 	margin: 0 auto;
 }
 
+.hamburger-menu:hover {
+	opacity: 0.6;
+}
+
 @media (max-width: 600px) {
   .search-icon {
     display: none;
@@ -83,7 +87,7 @@ header {
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+	color: #af7e4d;
 }
 
 .sidenav .closebtn {
@@ -115,11 +119,26 @@ header {
 	cursor: pointer;
 }
 
+.logo-image:hover {
+    opacity: 0.8;
+}
+
+.logo-image {
+    height: 40px;
+    width: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+	cursor: pointer;
+}
 .svg-icon {
 	width: 20px;
 	height: 20px;
 	vertical-align: middle;
 	cursor: pointer;
+}
+
+.svg-icon:hover {
+	opacity: 0.6;
 }
 
 .search-icon {
@@ -129,6 +148,9 @@ header {
 	cursor: pointer;
 }
 
+.search-icon:hover {
+	opacity: 0.6;
+}
 
 /* Main Content Area */
 main {
@@ -304,3 +326,6 @@ footer {
 	transition: background-color 0.2s;
 }
 
+.view-products-btn:hover {
+	background-color: #c37911;
+}
