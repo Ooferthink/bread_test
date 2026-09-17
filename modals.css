@@ -58,7 +58,7 @@ header {
   }
 }
 
-/* Side Navigation */
+/* Sidebar Navigation */
 .sidenav {
   height: 100%;
   width: 0;
@@ -70,6 +70,8 @@ header {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidenav a {
@@ -97,6 +99,17 @@ header {
   font-size: 36px;
   margin-left: 50px;
 }
+
+.sidenav-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-top: auto; 
+	padding-bottom: 10px;
+	max-width: fit-content;
+}
+
 
 /* Button Styles */
 .button {
