@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grainy Delights</title>
     <link rel="stylesheet" href="modals.css">
-    <script src="script.js"></script>
+    <script src="script.js"></script> 
 </head>
 <body>
  
@@ -22,7 +22,7 @@
             <img src="images/cart.png" alt="Shopping_Cart_Icon" class="svg-icon" onclick="window.location.href='';">
         </div>
     </header>
-
+ 
     <!-- Side Navigation -->
     <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -31,19 +31,11 @@
     <a href="https://www.facebook.com/">Contact Us</a>
     </div>
 
- 
+
     <!-- Main Products Section -->
-    <main class="story-main">
-        <section class="story-section-text">
-        <div class="story-section-image">
-        <h1 class="headline-text">Our Story</h1> <br> <br>
-        <p class="headline_descrip">Welcome to Grainy Delights, where we bring you the finest selection of traditional Filipino breads and pastries. Our journey began with a passion for preserving the rich culinary heritage of the Philippines, one delicious bite at a time.</p> <br>
-		<p class="headline_descrip">From the soft and fluffy Ensaymada to the sweet and savory Hopia, our products are crafted with love and care, using only the freshest ingredients. We take pride in our artisanal approach, ensuring that every item is baked to perfection and bursting with flavor.</p> <br>
-		<p class="headline_descrip">At Grainy Delights, we are committed to providing our customers with the highest quality products and exceptional service. We source our ingredients from local farmers and suppliers, ensuring that every item you purchase is made with care and attention to detail.</p>
-        </div>
-        </section>
-        <section>
-         <h2 class="sub-headline-text">Our Other Popular Pastries</h2>
+    <main class="test_background">
+        <br><br>
+        <h2 class="headline-text">Featured Products</h2>
        
         <div class="product-grid">
             <!-- Product 1 -->
@@ -69,12 +61,30 @@
                 <p class="product-price">₱500.00</p>
                 <button class="add-to-cart-btn" onclick="addToCart('Buko Pie')">Add to Cart</button>
             </div>
-            <button class="view-products-btn" style="grid-column: 1 / -1; margin: 0 auto;" onclick="window.location.href='menu.html'" > View All Products</button>
-            </section>
+ 
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="images/otap.png" alt="Otap" class="product-image">
+                <h3 class="product-title">Otap</h3>
+                <p class="product-price">₱100.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Otap')">Add to Cart</button>
+            </div>
+       <div class="product-card">
+                <img src="images/piaya.png" alt="Piaya" class="product-image">
+                <h3 class="product-title">Piaya</h3>
+                <p class="product-price">₱55.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Piaya')">Add to Cart</button>
+            </div>
+  <div class="product-card">
+                <img src="images/pandesal.png" alt="Classic Pandesal" class="product-image">
+                <h3 class="product-title">Classic Pandesal</h3>
+                <p class="product-price">₱30.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Classic Pandesal')">Add to Cart</button>
+            </div>
         </div>
     </main>
-    
-        <!-- Footer Section -->
+ 
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2026 Grainy Delights. All rights reserved.</p>
         <div class="footer-icons">

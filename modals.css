@@ -40,6 +40,61 @@ header {
 	gap: 15px;
 }
 
+.hamburger-menu {
+	color: white;
+	font-size: 35px;
+	cursor: pointer;
+	user-select: none;
+	margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .search-icon {
+    display: none;
+  }
+}
+
+/* Side Navigation */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FDA322;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 14px 8px 14px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  margin: 0 18px;
+}
+
+.sidenav a:not(.closebtn) {
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.28);
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Button Styles */
 .button {
 	font-size: 12px;
   border-color: white;
@@ -57,6 +112,20 @@ header {
     width: 50px;
     padding-left: 5px;
     padding-right: 5px;
+	cursor: pointer;
+}
+
+.svg-icon {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.search-icon {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
 	cursor: pointer;
 }
 
@@ -166,13 +235,7 @@ footer {
 	gap: 15px;
 }
 
-.svg-icon {
-	width: 20px;
-	height: 20px;
-	vertical-align: middle;
-	cursor: pointer;
-}
-
+/* Story Section */
 .story-section-text {
 	text-align: center;
 	width: 100%;
@@ -211,8 +274,14 @@ footer {
 	margin-right: auto;
 }
 
+/* Headline and Sub-headline Styles */
 .headline-text {
 	font-size: 40px;
+	padding-top : 20px;
+}
+
+.sub-headline-text {
+	font-size: 30px;
 	padding-top : 20px;
 }
 
@@ -221,6 +290,7 @@ footer {
 	line-height: 1.2;		
 }
 
+/*Button Styles for View Products Button*/
 .view-products-btn {
 	background-color: #FDA322;
 	color: white;
@@ -233,3 +303,4 @@ footer {
 	width: 80%;
 	transition: background-color 0.2s;
 }
+
