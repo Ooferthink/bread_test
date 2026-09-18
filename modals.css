@@ -37,6 +37,7 @@ header {
 
 .header-icons {
 	display: flex;
+    align-items: center;
 	gap: 15px;
 }
 
@@ -46,10 +47,11 @@ header {
 	cursor: pointer;
 	user-select: none;
 	margin: 0 auto;
+	transition: transform 0.2s ease; 
 }
 
 .hamburger-menu:hover {
-	opacity: 0.6;
+	transform: scale(1.2);
 }
 
 @media (max-width: 600px) {
@@ -95,7 +97,7 @@ header {
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
+  right: 0px;
   font-size: 36px;
   margin-left: 50px;
 }
@@ -132,26 +134,26 @@ header {
 	cursor: pointer;
 }
 
-.logo-image:hover {
-    opacity: 0.8;
-}
-
-.logo-image {
-    height: 40px;
-    width: 50px;
-    padding-left: 5px;
-    padding-right: 5px;
-	cursor: pointer;
-}
 .svg-icon {
 	width: 20px;
 	height: 20px;
 	vertical-align: middle;
 	cursor: pointer;
+	transition: transform 0.2s ease; 
+}
+
+.cart-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
 }
 
 .svg-icon:hover {
-	opacity: 0.6;
+	transform: scale(1.2); 
 }
 
 .search-icon {
@@ -159,10 +161,11 @@ header {
 	height: 20px;
 	vertical-align: middle;
 	cursor: pointer;
+	transition: transform 0.2s ease;
 }
 
 .search-icon:hover {
-	opacity: 0.6;
+	transform: scale(1.2);
 }
 
 /* Main Content Area */
@@ -342,3 +345,208 @@ footer {
 .view-products-btn:hover {
 	background-color: #c37911;
 }
+
+/* Shopping Cart Modal Styles */
+.cart-modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.cart-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.close-cart {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-cart:hover {
+    color: #333;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    color: #333;
+}
+
+.remove-btn {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #d43f3f;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #333;
+}
+
+.checkout-btn {
+    background-color: #FDA322;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+
+.checkout-btn:hover {
+    background-color: #c37911;
+}
+
+/* Search Modal Styles */
+.search-modal {
+	display: none;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.search-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.close-search {
+	 color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.close-search:hover {
+	color: #000000;
+}
+/* Quantity Control Styles */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty-btn {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover {
+    background-color: #ddd;
+}
+
+.remove-btn {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.remove-btn:hover {
+    background-color: #d43f3f;
+}
+
+#cart-count {
+    position: absolute;
+    top: -1px;
+    right: -3px;
+    width: 10px;
+    height: 10px;
+    background-color: #ff4c4c;
+    border-radius: 50%;
+    font-size: 0;
+    pointer-events: none;
+}
+
+/* Toast Notification Styles */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #FDA322;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s;
+    font-weight: bold;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
+
