@@ -58,7 +58,7 @@ function removeFromCart(index) {
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     let mainEl = document.getElementById("main") || document.querySelector("main");
-    if (mainEl) mainEl.style.marginLeft = "250px";
+    if (mainEl) mainEl.style.marginLeft = "0";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
