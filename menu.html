@@ -60,7 +60,9 @@
         <div class="search-content">
             <span class="close-search" onclick="closeSearch()">&times;</span>
             <h2 class="headline-modal">Search Products</h2>
-            <input type="text" id="searchInput" placeholder="What are you craving today?" onkeyup="filterProducts(this.value)" class="search-input">
+            <form onsubmit="submitSearch(event)">
+                <input type="text" id="searchInput" placeholder="What are you craving today?" onkeyup="filterProducts(this.value)" class="search-input">
+            </form>
         </div>
     </div>
 
@@ -121,6 +123,8 @@
                 <h3 class="product-title">Classic Pandesal</h3>
                 <p class="product-price">₱30.00</p>
             </div>
+
+            <p id="noResults" class="no-results" style="display: none;">No products found.</p>
         </div>
     </main>
  
