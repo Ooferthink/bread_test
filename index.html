@@ -62,7 +62,7 @@
             <input type="text" id="searchInput" placeholder="What are you craving today?" onkeyup="filterProducts(this.value)" class="search-input">
         </div>
     </div>
- 
+
     <!-- Product Modal --> 
     <div id="productModal" class="product-modal">
         <div class="product-content">
@@ -91,21 +91,21 @@
         <div class="product-grid">
 
             <!-- Product 1 -->
-            <div class="product-card">
+            <div class="product-card" onclick="openProductDetails('Ensaymada', 50.00)">
                 <img src="images/ensaymada.png" alt="Ensaymada" class="product-image">
                 <h3 class="product-title">Ensaymada</h3>
                 <p class="product-price">₱50.00</p>
             </div>
  
             <!-- Product 2 -->
-            <div class="product-card">
+            <div class="product-card" onclick="openProductDetails('Hopia', 65.00)">
                 <img src="images/Hopia.png" alt="Hopia" class="product-image">
                 <h3 class="product-title">Hopia</h3>
                 <p class="product-price">₱65.00</p>
             </div>
  
             <!-- Product 3 -->
-            <div class="product-card">
+            <div class="product-card" onclick="openProductDetails('Buko Pie', 500.00)">
                 <img src="images/Buko_Pie.png" alt="Buko Pie" class="product-image">
                 <h3 class="product-title">Buko Pie</h3>
                 <p class="product-price">₱500.00</p>

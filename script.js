@@ -167,3 +167,28 @@ function openSearch() {
 function closeSearch() {
     document.getElementById("searchModal").style.display = "none";
 }
+
+// Product Details Modal logic
+function openProductDetails(productName, price) {
+    const productModal = document.getElementById("productModal");
+    const productDetails = document.getElementById("productDetails");
+    const productAddButton = document.getElementById("productAddButton");
+
+    if (productModal && productDetails) {
+        productDetails.innerHTML = `
+            <h3>${productName}</h3>
+            <p>Price: ₱${price.toFixed(2)}</p>
+        `;
+        if (productAddButton) {
+            productAddButton.onclick = () => {
+                addToCart(productName, price);
+                closeProduct();
+            };
+        }
+        productModal.style.display = "block";
+    }
+}
+
+function closeProduct() {
+    document.getElementById("productModal").style.display = "none";
+}

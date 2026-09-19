@@ -64,6 +64,16 @@
         </div>
     </div>
 
+    <!-- Product Details Modal -->
+    <div id="productModal" class="product-modal">
+        <div class="product-content">
+            <span class="close-product" onclick="closeProduct()">&times;</span>
+            <h2 class="headline-modal">Product Details</h2>
+            <div id="productDetails"></div>
+            <button id="productAddButton" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+
     <!-- Main Products Section -->
     <main class="test_background">
         <br><br>
@@ -71,51 +81,45 @@
         <div class="product-grid">
 
             <!-- Product 1 -->
-            <div class="product-card">
+            <div class="product-card" onclick="openProductDetails('Ensaymada', 50.00)">
                 <img src="images/ensaymada.png" alt="Ensaymada" class="product-image">
                 <h3 class="product-title">Ensaymada</h3>
                 <p class="product-price">₱50.00</p>
-                <button class="add-to-cart-btn" onclick="addToCart('Ensaymada', 50.00)">Add to Cart</button>
             </div>
 
             <!-- Product 2 -->
-            <div class="product-card">
+            <div class="product-card" onclick="openProductDetails('Hopia', 65.00)">
                 <img src="images/Hopia.png" alt="Hopia" class="product-image">
                 <h3 class="product-title">Hopia</h3>
                 <p class="product-price">₱65.00</p>
-                <button class="add-to-cart-btn" onclick="addToCart('Hopia', 65.00)">Add to Cart</button>
             </div>
  
             <!-- Product 3 -->
-            <div class="product-card">
+            <div class="product-card" onclick="openProductDetails('Buko Pie', 500.00)">
                 <img src="images/Buko_Pie.png" alt="Buko Pie" class="product-image">
                 <h3 class="product-title">Buko Pie</h3>
                 <p class="product-price">₱500.00</p>
-                <button class="add-to-cart-btn" onclick="addToCart('Buko Pie', 500.00)">Add to Cart</button>
             </div>
-        
+
             <!-- Product 4 -->
-            <div class="product-card">
+            <div class="product-card" onclick="openProductDetails('Otap', 100.00)">
                 <img src="images/otap.png" alt="Otap" class="product-image">
                 <h3 class="product-title">Otap</h3>
                 <p class="product-price">₱100.00</p>
-                <button class="add-to-cart-btn" onclick="addToCart('Otap', 100.00)">Add to Cart</button>
             </div>
 
             <!-- Product 5 -->
-            <div class="product-card">
+            <div class="product-card" onclick="openProductDetails('Piaya', 55.00)">
                 <img src="images/piaya.png" alt="Piaya" class="product-image">
                 <h3 class="product-title">Piaya</h3>
                 <p class="product-price">₱55.00</p>
-                <button class="add-to-cart-btn" onclick="addToCart('Piaya', 55.00)">Add to Cart</button>
             </div>
 
              <!-- Product 6 -->
-            <div class="product-card">
-                <img src="images/pandesal.png" alt="Classic Pandesal" class="product-image">
+            <div class="product-card" onclick="openProductDetails('Classic Pandesal', 30.00)">
+                <img src="images/pandesal.png" alt="Classic Pandesal" class="product-image" onclick="">
                 <h3 class="product-title">Classic Pandesal</h3>
                 <p class="product-price">₱30.00</p>
-                <button class="add-to-cart-btn" onclick="addToCart('Classic Pandesal', 30.00)">Add to Cart</button>
             </div>
         </div>
     </main>
