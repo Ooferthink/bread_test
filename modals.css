@@ -318,8 +318,14 @@ footer {
 
 .sub-headline-text {
 	font-size: 30px;
-	padding-top : 20px;
+	padding-top : 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+    align-content: center;
 }
+
+
 
 .headline_descrip {
 	font-size: 20px;
@@ -504,6 +510,8 @@ footer {
 .close-product:hover {
     color: #333;
 }
+
+
 
 
 /* Quantity Control Styles */

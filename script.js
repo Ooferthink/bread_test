@@ -187,6 +187,15 @@ function closeSearch() {
 }
 
 // Product Details Modal logic
+const productDescriptions = {
+    "Ensaymada": "A soft, buttery Filipino brioche topped with sugar and grated cheese.",
+    "Hopia": "Flaky pastry filled with a rich, sweet mung bean filling.",
+    "Buko Pie": "A tender, golden crust filled with creamy young coconut custard.",
+    "Otap": "Crisp, flaky layers of pastry lightly coated with sugar.",
+    "Piaya": "A thin, griddled pastry filled with sweet muscovado sugar.",
+    "Classic Pandesal": "Soft and lightly sweet Filipino bread rolls with a delicate crumb."
+};
+
 function openProductDetails(productName, price) {
     const productModal = document.getElementById("productModal");
     const productDetails = document.getElementById("productDetails");
@@ -195,7 +204,8 @@ function openProductDetails(productName, price) {
     if (productModal && productDetails) {
         productDetails.innerHTML = `
             <h3>${productName}</h3>
-            <p>Price: ₱${price.toFixed(2)}</p>
+            <p>Price: ₱${price.toFixed(2)}</p> <br>
+            <p>${productDescriptions[productName] || "A freshly baked favorite from Grainy Delights."}</p> <br>
         `;
         if (productAddButton) {
             productAddButton.onclick = () => {
