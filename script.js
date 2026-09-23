@@ -220,3 +220,4 @@ function openProductDetails(productName, price) {
 function closeProduct() {
     document.getElementById("productModal").style.display = "none";
 }
+
