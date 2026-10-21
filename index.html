@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="images/bread.png">
     <link rel="stylesheet" href="modals.css">
     <script src="script.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
 </head>
 <body>
  
@@ -28,6 +29,15 @@
             <img src="images/cart.png" alt="Shopping Cart" class="svg-icon" onclick="openCart()">
             <span id="cart-count">0</span>
         </div>
+            <!-- g_id_onload contains Google Identity Services settings -->
+    <div
+      id="g_id_onload"
+      data-auto_prompt="false"
+      data-callback="handleCredentialResponse"
+      data-client_id="326833442940-7q665bv0jvo6elh4p6f0ad25edt7n86l.apps.googleusercontent.com"
+    ></div>
+    <!-- g_id_signin places the button on a page and supports customization -->
+    <div class="g_id_signin"></div>
     </header>
 
     <!-- Side Navigation -->
@@ -41,6 +51,7 @@
             <span class="logo">Grainy Delights</span>
         </div>
     </div>
+
 
     <!-- Shopping Cart -->
     <div id="cartModal" class="cart-modal">
